@@ -10,8 +10,9 @@ local cmd = {
    function (f, p) return 'tar -cf /tmp/'..f..'.tar.'..date..' '..p end,
    function (f, p) return '\
 ftp -n -p dedibackup-dc3.online.net<<END_SCRIPT\
-quote USER sd-83415\
+quote USER sd-79079\
 quote PASS arno1234\
+binary\
 put /tmp/'..f..'.tar.'..date..' '..f..'.tar.'..date..'\
 quit\
 END_SCRIPT\
